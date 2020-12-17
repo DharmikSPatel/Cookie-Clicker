@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/id_constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/fadedRect"
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:alpha=".2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/rectangle" />
+
+    <ImageView
+        android:id="@+id/id_shine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleX="1.5"
+        android:scaleY="1.5"
+        app:layout_constraintBottom_toBottomOf="@+id/id_ivCookie"
+        app:layout_constraintEnd_toEndOf="@+id/id_ivCookie"
+        app:layout_constraintStart_toStartOf="@+id/id_ivCookie"
+        app:layout_constraintTop_toTopOf="@+id/id_ivCookie"
+        app:srcCompat="@drawable/shine" />
+
+    <ImageView
+        android:id="@+id/id_ivCookie"
+        android:layout_width="268dp"
+        android:layout_height="271dp"
+        app:layout_constraintBottom_toTopOf="@+id/bottombarLeft"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fadedRect"
+        app:layout_constraintVertical_bias="0.38"
+        app:srcCompat="@drawable/cookie" />
+
+    <TextView
+        android:id="@+id/id_tvAmountOfCookies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0 Cookies"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:fontFamily="@font/kavoon"
+        app:layout_constraintBottom_toBottomOf="@+id/fadedRect"
+        app:layout_constraintEnd_toEndOf="@+id/fadedRect"
+        app:layout_constraintStart_toStartOf="@+id/fadedRect"
+        app:layout_constraintTop_toTopOf="@+id/fadedRect" />
+
+    <ImageView
+        android:id="@+id/bottombarLeft"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/left" />
+
+    <ImageView
+        android:id="@+id/bottombarRIGHT"
+        android:layout_width="420dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="75dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bottombarLeft"
+        app:srcCompat="@drawable/right" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
